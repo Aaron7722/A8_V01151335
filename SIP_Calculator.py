@@ -40,7 +40,7 @@ st.write(f"**Estimated Final Amount:** ₹{future_value:,.0f}")
 st.write(f"**Total Gain:** ₹{gain:,.0f}")
 
 # Plot corpus growth over time
-st.subheader("📈 Corpus Growth Over Time")
+st.subheader("📈 Growth Over Time")
 corpus = []
 for m in range(1, months+1):
     if monthly_rate > 0:
@@ -52,7 +52,7 @@ for m in range(1, months+1):
 fig, ax = plt.subplots()
 ax.plot(range(1, months+1), corpus, color='#4CAF50')
 ax.set_xlabel('Months')
-ax.set_ylabel('Corpus (₹)')
+ax.set_ylabel('(₹)')
 ax.set_title('Growth of Investment Over Time')
 st.pyplot(fig)
 

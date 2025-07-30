@@ -12,6 +12,13 @@ st.sidebar.header("SIP Parameters")
 monthly_investment = st.sidebar.number_input("Monthly Investment Amount (₹)", min_value=500, value=5000, step=500)
 annual_return = st.sidebar.number_input("Expected Annual Return Rate (%)", min_value=1.0, value=12.0, step=0.5)
 years = st.sidebar.number_input("Investment Period (Years)", min_value=1, value=10, step=1)
+# Show warnings if inputs are very low
+if monthly_investment <= 500:
+    st.warning("⚠️ Monthly investment amount seems very low. Consider investing more for better returns.")
+if years < 3:
+    st.warning("⚠️ Investment period is quite short. Longer periods benefit more from compounding.")
+if annual_return < 5:
+    st.warning("⚠️ Expected return rate is quite low. Typical equity SIPs assume around 10-12%.")
 
 # Calculations
 months = years * 12

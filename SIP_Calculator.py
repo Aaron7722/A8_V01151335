@@ -57,5 +57,5 @@ ax.set_title('Growth of Investment Over Time')
 st.pyplot(fig)
 
 st.markdown("---")
-st.markdown("✅ *Built with Streamlit*")
+
 

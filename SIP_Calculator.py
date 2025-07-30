@@ -1,5 +1,6 @@
 import streamlit as st
 import math
+pip install matplotlib
 import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="SIP Calculator", page_icon="📈", layout="centered")
